@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Kyrill Hartog · Editorial Director &amp; Content Strategist</title>
+<meta name="description" content="Kyrill Hartog is an editorial director and content strategist helping (fin)tech, VC and AI companies turn complex ideas into content that earns attention, trust and authority.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Courier+Prime&family=Questrial&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#000; --fg:#fff; --muted:#a3a3a3; --line:#2a2a2a; --panel:#0d0d0d;
+    --head:'Archivo Black', 'Arial Black', sans-serif;
+    --body:'Questrial', 'Helvetica Neue', Arial, sans-serif;
+    --mono:'Courier Prime', 'Courier New', monospace;
+    --wrap:1160px; --pad:clamp(20px,5vw,48px);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:18px;line-height:1.55;-webkit-font-smoothing:antialiased}
+  img{display:block;max-width:100%}
+  a{color:inherit}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--pad)}
+  h1,h2,h3{font-family:var(--head);font-weight:400;text-transform:uppercase;letter-spacing:.01em;line-height:1.02}
+  .label{font-family:var(--mono);font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+  .link{font-family:var(--mono);font-size:15px;text-transform:uppercase;letter-spacing:.06em;text-decoration:underline;text-underline-offset:4px}
+  .link:hover{color:var(--muted)}
+  section{padding:clamp(64px,10vw,120px) 0;border-top:1px solid var(--line)}
+  .sec-head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:clamp(32px,5vw,56px)}
+  .sec-head h2{font-size:clamp(34px,5.5vw,64px)}
+  .sec-head p{max-width:460px;color:var(--muted)}
+
+  /* nav */
+  nav{position:sticky;top:0;z-index:10;background:rgba(0,0,0,.88);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;justify-content:space-between;align-items:center;height:64px}
+  nav .brand{font-family:var(--head);text-transform:uppercase;text-decoration:none;font-size:18px}
+  nav ul{display:flex;gap:28px;list-style:none}
+  nav ul a{font-family:var(--mono);font-size:14px;text-transform:uppercase;letter-spacing:.06em;text-decoration:none;color:var(--muted)}
+  nav ul a:hover{color:var(--fg)}
+  @media (max-width:760px){nav ul li:not(:last-child){display:none}}
+
+  /* hero */
+  .hero{padding:clamp(48px,8vw,96px) 0 clamp(40px,6vw,64px);border-top:0}
+  .hero-grid{display:grid;grid-template-columns:1.35fr 1fr;gap:clamp(32px,5vw,72px);align-items:center}
+  .hero h1{font-size:clamp(56px,10vw,128px);margin:18px 0 28px}
+  .hero .lede{font-size:clamp(20px,2.2vw,26px);line-height:1.4;max-width:620px}
+  .hero .lede b{font-weight:400;font-family:var(--head);text-transform:uppercase;font-size:.85em;letter-spacing:.01em}
+  .hero .ctas{display:flex;gap:28px;margin-top:36px;flex-wrap:wrap}
+  .btn{display:inline-block;background:var(--fg);color:var(--bg);font-family:var(--mono);text-transform:uppercase;letter-spacing:.06em;font-size:15px;padding:14px 22px;text-decoration:none;border:1px solid var(--fg)}
+  .btn:hover{background:var(--bg);color:var(--fg)}
+  .btn.ghost{background:transparent;color:var(--fg)}
+  .btn.ghost:hover{background:var(--fg);color:var(--bg)}
+  .portrait{width:100%;height:auto;filter:grayscale(1) contrast(1.05)}
+  @media (max-width:860px){.hero-grid{grid-template-columns:1fr}.portrait{max-width:420px}}
+
+  /* logos */
+  .clients{padding:clamp(48px,7vw,88px) 0}
+  .clients .intro{text-align:center;margin-bottom:clamp(32px,5vw,56px)}
+  .clients .intro h2{font-size:clamp(28px,4vw,44px);margin-top:12px}
+  .logos{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));border-left:1px solid var(--line);border-top:1px solid var(--line)}
+  .logos div{display:flex;align-items:center;justify-content:center;aspect-ratio:2/1;border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:clamp(14px,2.4vw,30px)}
+  .logos img{max-height:46px;max-width:78%;width:auto;object-fit:contain;opacity:.88;transition:opacity .2s}
+  .logos div:hover img{opacity:1}
+  .logos img.tall{max-height:58px}
+  @media (max-width:860px){.logos{grid-template-columns:repeat(3,minmax(0,1fr))}}
+  @media (max-width:520px){.logos{grid-template-columns:repeat(2,minmax(0,1fr))}.logos img{max-height:36px}}
+
+  /* public work */
+  .work{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(28px,4vw,48px)}
+  .card{display:flex;flex-direction:column;gap:16px}
+  .card .img{background:var(--panel);border:1px solid var(--line);aspect-ratio:16/10;overflow:hidden;display:flex;align-items:center;justify-content:center}
+  .card .img img{width:100%;height:100%;object-fit:contain;filter:grayscale(1);transition:transform .5s}
+  .card:hover .img img{transform:scale(1.03)}
+  .card h3{font-size:clamp(22px,2.4vw,30px)}
+  .card .meta{display:flex;gap:14px;flex-wrap:wrap}
+  .card p{color:#d6d6d6}
+  .card .result{color:var(--fg)}
+  .card .result::before{content:"→ ";font-family:var(--mono)}
+  .card.wide{grid-column:1 / -1;display:grid;grid-template-columns:1.2fr 1fr;gap:clamp(24px,4vw,48px);align-items:center}
+  .card.wide .img{aspect-ratio:16/9}
+  .card .body{display:flex;flex-direction:column;gap:14px}
+  @media (max-width:860px){.work{grid-template-columns:1fr}.card.wide{grid-template-columns:1fr}}
+
+  /* private work */
+  .private-note{display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:start;border:1px solid var(--line);padding:22px 24px;margin-bottom:40px;background:var(--panel)}
+  .private-note .lock{font-family:var(--mono);border:1px solid var(--fg);padding:4px 10px;font-size:13px;letter-spacing:.06em;white-space:nowrap}
+  .private-note p{color:#d6d6d6}
+  .dossier{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,330px),1fr));border-top:1px solid var(--line);border-left:1px solid var(--line)}
+  .file{border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:28px;display:flex;flex-direction:column;gap:14px}
+  .file .thumb{aspect-ratio:16/9;overflow:hidden;border:1px solid var(--line);position:relative;background:var(--panel)}
+  .file .thumb img{width:100%;height:100%;object-fit:contain;filter:grayscale(1)}
+  .file .tag{align-self:flex-start;margin-top:-4px;background:var(--fg);color:var(--bg);font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;padding:4px 8px}
+  .file h3{font-size:22px}
+  .file dl{display:grid;grid-template-columns:88px 1fr;gap:6px 14px;font-size:16px}
+  .file dt{font-family:var(--mono);font-size:13px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);padding-top:3px}
+  .file dd{color:#d6d6d6}
+  .file .link{margin-top:auto;padding-top:6px}
+
+  .file .thumb.text{display:flex;align-items:center;justify-content:center;background:var(--panel);padding:20px;text-align:center}
+  .file .thumb.text b{font-family:var(--head);font-weight:400;font-size:clamp(22px,2.6vw,32px);letter-spacing:.04em;line-height:1.05}
+  .more{list-style:none;margin-top:clamp(40px,6vw,64px);border-top:1px solid var(--line)}
+  .more li{display:grid;grid-template-columns:260px 1fr;gap:20px;padding:18px 0;border-bottom:1px solid var(--line);align-items:baseline}
+  .more a{font-size:20px;text-decoration:none}
+  .more a:hover{text-decoration:underline;text-underline-offset:4px}
+  @media (max-width:700px){.more li{grid-template-columns:1fr;gap:4px}}
+
+  /* services */
+  .services{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--fg)}
+  .service{padding:26px 24px 8px 0;border-right:1px solid var(--line);padding-left:24px}
+  .service:first-child{padding-left:0}
+  .service:last-child{border-right:0}
+  .service .num{font-family:var(--mono);color:var(--muted);font-size:14px}
+  .service h3{font-size:22px;margin:14px 0 12px}
+  .service p{color:#d6d6d6;font-size:16px}
+  @media (max-width:960px){.services{grid-template-columns:1fr 1fr}.service{padding-left:0;border-right:0;border-bottom:1px solid var(--line);padding-bottom:26px}}
+  @media (max-width:560px){.services{grid-template-columns:1fr}}
+
+  /* testimonials */
+  .quotes{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(28px,4vw,56px)}
+  blockquote{border-left:2px solid var(--fg);padding-left:24px}
+  blockquote p{font-size:clamp(20px,2.1vw,25px);line-height:1.4}
+  blockquote cite{display:block;margin-top:14px;font-style:normal}
+  @media (max-width:760px){.quotes{grid-template-columns:1fr}}
+  blockquote.draft{border-left-style:dashed;opacity:.75}
+  .draft-tag{display:inline-block;font-family:var(--mono);font-size:12px;letter-spacing:.06em;border:1px dashed var(--fg);padding:3px 8px;margin-bottom:12px}
+
+  /* about */
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,72px);align-items:start}
+  .about-grid img{width:100%;height:auto;filter:grayscale(1)}
+  .about-grid .text p+p{margin-top:16px}
+  .about-grid .text p{color:#d6d6d6}
+  .stats{display:grid;grid-template-columns:repeat(5,1fr);margin-top:clamp(40px,6vw,64px);border-top:1px solid var(--line)}
+  .stat{padding:22px 12px 0 0}
+  .stat b{display:block;font-family:var(--head);font-weight:400;font-size:clamp(30px,4vw,48px)}
+  .stat span{font-family:var(--mono);font-size:13px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+  .langs{margin-top:24px}
+  @media (max-width:860px){.about-grid{grid-template-columns:1fr}.stats{grid-template-columns:repeat(3,1fr);row-gap:20px}}
+
+  /* contact */
+  .contact{text-align:center}
+  .contact h2{font-size:clamp(44px,8vw,104px)}
+  .contact p{color:var(--muted);margin:22px auto 34px;max-width:520px}
+  .contact .mail{font-family:var(--mono);font-size:clamp(18px,2.6vw,28px);text-decoration:underline;text-underline-offset:6px;word-break:break-all}
+  .contact .row{display:flex;justify-content:center;gap:28px;margin-top:30px;flex-wrap:wrap}
+  footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-family:var(--mono);font-size:13px;letter-spacing:.06em;text-transform:uppercase}
+  footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#top">Kyrill Hartog</a>
+    <ul>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#private">Client work</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#writing">Writing</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="label">Editorial Director &amp; Content Strategist &nbsp;/&nbsp; (Fin)Tech, VC &amp; AI</div>
+      <h1>Kyrill<br>Hartog</h1>
+      <p class="lede">I help startups, funds and global brands turn complex ideas into <b>content that earns attention</b>, trust and long-term authority.</p>
+      <div class="ctas">
+        <a class="btn" href="#work">See the work</a>
+        <a class="btn ghost" href="mailto:hello.kyrillhartog@gmail.com">Get in touch</a>
+      </div>
+      <p class="label" style="margin-top:34px">Based in Luxembourg · Working across Europe in six languages</p>
+    </div>
+    <img class="portrait" src="img/portrait.jpg" alt="Portrait of Kyrill Hartog">
+  </div>
+</header>
+
+<section class="clients" aria-labelledby="clients-title">
+  <div class="wrap">
+    <div class="intro">
+      <div class="label">Clients &amp; collaborators</div>
+      <h2 id="clients-title">25+ companies, from early-stage startups to multinationals</h2>
+    </div>
+    <div class="logos">
+      <div><img src="img/logos/mastercard.png" alt="Mastercard" class="tall"></div>
+      <div><img src="img/logos/paypal.png" alt="PayPal"></div>
+      <div><img src="img/logos/slack.png" alt="Slack"></div>
+      <div><img src="img/logos/lvmh.png" alt="LVMH"></div>
+      <div><img src="img/logos/nestle.png" alt="Nestlé"></div>
+      <div><img src="img/logos/malt.png" alt="Malt"></div>
+      <div><img src="img/logos/doctolib.png" alt="Doctolib"></div>
+      <div><img src="img/logos/hololens.png" alt="Microsoft HoloLens"></div>
+      <div><img src="img/logos/alstom.png" alt="Alstom"></div>
+      <div><img src="img/logos/boehringer.png" alt="Boehringer Ingelheim"></div>
+      <div><img src="img/logos/50intech.png" alt="50inTech"></div>
+      <div><img src="img/logos/dreem.png" alt="Dreem"></div>
+      <div><img src="img/logos/maddyness.png" alt="Maddyness"></div>
+      <div><img src="img/logos/zest.png" alt="Zest"></div>
+      <div><img src="img/logos/spie.png" alt="SPIE" class="tall"></div>
+      <div><img src="img/logos/virbac.png" alt="Virbac"></div>
+      <div><img src="img/logos/jenji.png" alt="Jenji" class="tall"></div>
+      <div><img src="img/logos/pelico.png" alt="Pelico"></div>
+      <div><img src="img/logos/gapstars.png" alt="Gapstars"></div>
+      <div><img src="img/logos/sqwad.png" alt="Sqwad"></div>
+      <div><img src="img/logos/unlikely.png" alt="Unlikely Technology"></div>
+      <div><img src="img/logos/unither.png" alt="Unither Pharmaceuticals" class="tall"></div>
+      <div><img src="img/logos/w.png" alt="Client logo" class="tall"></div>
+      <div><img src="img/logos/cm.png" alt="Client logo" class="tall"></div>
+      <div><img src="img/logos/diamond.png" alt="Client logo" class="tall"></div>
+    </div>
+  </div>
+</section>
+
+<section id="work" aria-labelledby="work-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="label">Featured work</div>
+        <h2 id="work-title">Latest flagship project</h2>
+      </div>
+      <p>Research-led content built to earn attention well beyond the client's own channels.</p>
+    </div>
+    <div class="work">
+      <article class="card wide">
+        <div class="img"><img src="img/avp.jpg" alt="The AVP Transatlantic Index 2026 report"></div>
+        <div class="body">
+          <div class="meta"><span class="label">Research report</span><span class="label">AVP Capital · Venture capital</span></div>
+          <h3>The 2026 Transatlantic Index</h3>
+          <p>The fund's flagship thought-leadership report on how founders and capital move between Europe and the US. I set the editorial strategy and voice, designed the founder survey, interviewed 12 founders and wrote the report.</p>
+          <p class="result">Covered by Les Echos, FDI Intelligence, Startups Magazine and IT Brief; now a lead-generation asset across PR, newsletters and AI search.</p>
+          <a class="link" href="https://avpcap.com/europe-wants-startup-sovereignty-but-62-of-founders-are-reliant-on-us-ai-infrastructure/" target="_blank" rel="noopener">View the report</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="private" aria-labelledby="private-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="label">Client work</div>
+        <h2 id="private-title">Behind closed doors</h2>
+      </div>
+      <p>Most of my client work isn't public: it lives behind paywalls, client logins and NDAs, or was published under someone else's name.</p>
+    </div>
+
+    <div class="private-note">
+      <span class="lock">ON REQUEST</span>
+      <p>Below is what each project involved and what it was for. Where the client allows it, I'm happy to share excerpts or walk you through the work on a call.</p>
+    </div>
+
+    <div class="dossier">
+      <article class="file">
+        <div class="thumb text"><b>HALEON</b></div>
+        <span class="tag">Healthcare</span>
+        <div class="label">Haleon · Consumer healthcare</div>
+        <h3>Brand and campaign support across the Benelux</h3>
+        <dl>
+          <dt>Format</dt><dd>Online campaigns, email journeys and stakeholder communications</dd>
+          <dt>My role</dt><dd>Advised on brand strategy and rebuilt the email journey for dental and pharmaceutical professionals, in both process and content</dd>
+          <dt>Worked with</dt><dd>Senior leadership and cross-functional marketing teams</dd>
+        </dl>
+        <a class="link" href="mailto:hello.kyrillhartog@gmail.com?subject=Question%3A%20Haleon%20work">Ask about this project</a>
+      </article>
+
+      <article class="file">
+        <div class="thumb"><img src="img/gladia.jpg" alt=""></div>
+        <span class="tag">40 pages</span>
+        <div class="label">Gladia · AI</div>
+        <h3>Audio Intelligence guide</h3>
+        <dl>
+          <dt>Format</dt><dd>40-page white paper for a speech-to-text API company</dd>
+          <dt>My role</dt><dd>Interviewed the CEO and CTO, vetted dozens of sources and wrote it for their ideal customer profile</dd>
+          <dt>Used for</dt><dd>Gated lead generation and sales enablement</dd>
+        </dl>
+        <a class="link" href="mailto:hello.kyrillhartog@gmail.com?subject=Sample%20request%3A%20Gladia%20white%20paper">Request an excerpt</a>
+      </article>
+
+      <article class="file">
+        <div class="thumb"><img src="img/algoalto.jpg" alt=""></div>
+        <span class="tag">25 pages</span>
+        <div class="label">Algo Alto · Financial services</div>
+        <h3>Digital asset investment guide</h3>
+        <dl>
+          <dt>Format</dt><dd>25-page flagship guide for high-net-worth investors</dd>
+          <dt>My role</dt><dd>Turned complex investment strategies into clear content, shaping structure and messaging with the C-suite</dd>
+          <dt>Used for</dt><dd>Sales, client onboarding and investor communications</dd>
+        </dl>
+        <a class="link" href="mailto:hello.kyrillhartog@gmail.com?subject=Sample%20request%3A%20Algo%20Alto%20guide">Request an excerpt</a>
+      </article>
+
+      <article class="file">
+        <div class="thumb"><img src="img/mastercard.jpg" alt=""></div>
+        <span class="tag">Campaign</span>
+        <div class="label">Mastercard · Payments</div>
+        <h3>Digital payments, explained</h3>
+        <dl>
+          <dt>Format</dt><dd>Messaging for animations, guides, brochures and landing pages</dd>
+          <dt>My role</dt><dd>Wrote the core copy for customers of ABN Amro and Rabobank, edited other copywriters and briefed the design agency</dd>
+          <dt>Used for</dt><dd>Retail-bank customer education</dd>
+        </dl>
+        <a class="link" href="mailto:hello.kyrillhartog@gmail.com?subject=Sample%20request%3A%20Mastercard%20work">Request an excerpt</a>
+      </article>
+
+      <article class="file">
+        <div class="thumb"><img src="img/gensight.jpg" alt=""></div>
+        <span class="tag">Campaign</span>
+        <div class="label">GenSight Biologics · Biotech</div>
+        <h3>Easy to spot, easy to stop</h3>
+        <dl>
+          <dt>Format</dt><dd>Awareness campaign: print, social and digital</dd>
+          <dt>My role</dt><dd>Co-developed the campaign concept and wrote the copy for a treatment for Leber's disease, a condition that causes blindness</dd>
+          <dt>Used for</dt><dd>Getting patients and doctors to use a new diagnosis platform</dd>
+        </dl>
+        <a class="link" href="mailto:hello.kyrillhartog@gmail.com?subject=Question%3A%20GenSight%20campaign">Ask about this project</a>
+      </article>
+
+      <article class="file">
+        <div class="thumb"><img src="img/paysdelaloire.jpg" alt=""></div>
+        <span class="tag">Consultancy</span>
+        <div class="label">Business Solutions Atlantic France · Public sector</div>
+        <h3>Selling a French region to foreign scale-ups</h3>
+        <dl>
+          <dt>Format</dt><dd>Brand repositioning, homepage copy and a blog series</dd>
+          <dt>My role</dt><dd>Consultancy for the Pays de la Loire innovation agency: researched EU and French economic data, interviewed experts and clients, and wrote for founders and CEOs</dd>
+          <dt>Used for</dt><dd>Attracting international scale-ups to the region</dd>
+        </dl>
+        <a class="link" href="mailto:hello.kyrillhartog@gmail.com?subject=Sample%20request%3A%20Atlantic%20France%20blog">Request an excerpt</a>
+      </article>
+
+      <article class="file">
+        <div class="thumb"><img src="img/dreem.jpg" alt=""></div>
+        <span class="tag">Ghostwritten</span>
+        <div class="label">Dreem Health · Medtech</div>
+        <h3>CEO voice for a launch</h3>
+        <dl>
+          <dt>Format</dt><dd>LinkedIn thought leadership and press releases</dd>
+          <dt>My role</dt><dd>Interviewed executives and sleep experts to build the CEO's voice, then ghostwrote under his name</dd>
+          <dt>Used for</dt><dd>The launch of Dreem Health's digital sleep clinic</dd>
+        </dl>
+        <a class="link" href="mailto:hello.kyrillhartog@gmail.com?subject=Sample%20request%3A%20Dreem%20Health">Request an excerpt</a>
+      </article>
+
+      <article class="file">
+        <div class="thumb"><img src="img/50intech.jpg" alt=""></div>
+        <span class="tag">Ghostwritten</span>
+        <div class="label">50inTech · HR tech</div>
+        <h3>Diversity in tech, made credible</h3>
+        <dl>
+          <dt>Format</dt><dd>Blog articles, masterclasses, B2B guides and CEO op-eds</dd>
+          <dt>My role</dt><dd>Led editorial strategy and ghostwrote for the CEO</dd>
+          <dt>Picked up by</dt><dd>Maddyness, France's leading startup media outlet</dd>
+        </dl>
+        <a class="link" href="mailto:hello.kyrillhartog@gmail.com?subject=Sample%20request%3A%2050inTech">Request an excerpt</a>
+      </article>
+
+      <article class="file">
+        <div class="thumb text"><b>WELCOME TO THE JUNGLE</b></div>
+        <span class="tag">Research</span>
+        <div class="label">Welcome to the Jungle · HR tech</div>
+        <h3>White papers on the future of work</h3>
+        <dl>
+          <dt>Format</dt><dd>White papers, e-books, research reports and articles</dd>
+          <dt>My role</dt><dd>Original research, stakeholder interviews and writing on talent acquisition, remote work and the freelance economy</dd>
+          <dt>Used for</dt><dd>Gated content for HR and employer audiences</dd>
+        </dl>
+        <a class="link" href="mailto:hello.kyrillhartog@gmail.com?subject=Sample%20request%3A%20Welcome%20to%20the%20Jungle">Request an excerpt</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="services" aria-labelledby="services-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="label">Services</div>
+        <h2 id="services-title">How I can help</h2>
+      </div>
+      <p>Available for freelance projects, retainers and advisory work with teams in tech, finance and VC.</p>
+    </div>
+    <div class="services">
+      <div class="service">
+        <div class="num">01</div>
+        <h3>Reports &amp; white papers</h3>
+        <p>Original research, founder and expert interviews, and flagship reports built to earn coverage and leads.</p>
+      </div>
+      <div class="service">
+        <div class="num">02</div>
+        <h3>Executive ghostwriting</h3>
+        <p>Op-eds, LinkedIn thought leadership and speeches that sound like your CEO, only sharper.</p>
+      </div>
+      <div class="service">
+        <div class="num">03</div>
+        <h3>Editorial strategy &amp; voice</h3>
+        <p>Brand-voice workshops, editorial standards and content strategy for teams that need one clear story.</p>
+      </div>
+      <div class="service">
+        <div class="num">04</div>
+        <h3>AI content systems</h3>
+        <p>AI-assisted workflows with clear policies and fact-checking, so your team publishes faster without losing accuracy.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="quotes-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="label">Kind words</div>
+        <h2 id="quotes-title">What clients say</h2>
+      </div>
+    </div>
+    <div class="quotes">
+      <blockquote>
+        <p>"Kyrill joined at a crucial stage in our development and helped us define our brand voice with a series of workshops. He also produced high quality written content for us, including a White Paper and several blogs."</p>
+        <cite class="label">Anna Jelezovskaia, Head of Content, Gladia</cite>
+      </blockquote>
+      <blockquote>
+        <p>"Kyrill consistently delivers work that is strategically aligned with our campaigns. I highly recommend him for any marketing leadership role."</p>
+        <cite class="label">Charlotte Boulat, Head of Marketing, Dreem Health</cite>
+      </blockquote>
+      <blockquote>
+        <p>"Kyrill was instrumental in shaping our brand into what it is today."</p>
+        <cite class="label">Tito Machado, CEO, DUPR</cite>
+      </blockquote>
+      <blockquote>
+        <p>"Kyrill is talented and very efficient. Highly recommended profile."</p>
+        <cite class="label">Caroline Ramade, CEO, 50inTech</cite>
+      </blockquote>
+      <blockquote>
+        <p>"Kyrill is knowledgeable, thinks along with you and is above all very pleasant to work with. We had an idea of the direction, but Kyrill helped us zoom out and turn our homepage copy into a coherent whole. His multilingualism was also a huge plus for us."</p>
+        <cite class="label">Roy, Tricycle · translated from Dutch</cite>
+      </blockquote>
+      <blockquote>
+        <p>"A real pleasure to work with Kyrill! He delivered high-quality content and always communicated clearly about deliverables and deadlines."</p>
+        <cite class="label">Maaike, Malt · translated from Dutch</cite>
+      </blockquote>
+      <blockquote>
+        <p>"Working with Kyrill on the AVP Transatlantic Index was a pleasure. He took a complex brief, shaped it into a clear story, and was a calm, reliable partner for our designers from first draft to launch."</p>
+        <cite class="label">Salome Berlemont Gilles, Kleemt</cite>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<section id="writing" aria-labelledby="writing-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="label">Writing &amp; journalism</div>
+        <h2 id="writing-title">Published &amp; picked up</h2>
+      </div>
+      <p>Before focusing on brands, I spent years as a journalist and editor. Here's a selection of that work, plus public reports.</p>
+    </div>
+
+    <div class="work">
+      <article class="card">
+        <div class="img"><img src="img/malt.jpg" alt="Freelancing in Europe report by Malt and BCG"></div>
+        <div class="meta"><span class="label">Research report</span><span class="label">Malt × BCG · Future of work</span></div>
+        <h3>Freelancing in Europe</h3>
+        <p>Co-authored with Malt and Boston Consulting Group: European freelancing trends and stakeholder interviews, turned into a report for founders and enterprise buyers.</p>
+        <p class="result">Hundreds of qualified B2B leads for Malt's sales team.</p>
+        <a class="link" href="https://cdn.malt.com/resources/reports/2022_freelancing_in_europe_en.pdf" target="_blank" rel="noopener">View the report</a>
+      </article>
+
+      <article class="card">
+        <div class="img"><img src="img/areweeurope.jpg" alt="Are We Europe magazine"></div>
+        <div class="meta"><span class="label">Editor-in-chief</span><span class="label">Are We Europe · Journalism</span></div>
+        <h3>Are We Europe magazine</h3>
+        <p>Co-founded and led an award-winning print and digital magazine, editing hundreds of long-form stories from writers in dozens of countries, with partners including The Guardian, Deutsche Welle and Die Zeit.</p>
+        <p class="result">Edited <i>Drums of Democracy</i>, nominated for the European Press Prize.</p>
+        <a class="link" href="https://archive.areweeurope.com/digital-magazines/" target="_blank" rel="noopener">Explore the magazine</a>
+      </article>
+
+      <article class="card">
+        <div class="img"><img src="img/guardian.jpg" alt="Kyrill Hartog's interview with Walter Scheidel in The Guardian"></div>
+        <div class="meta"><span class="label">Interview</span><span class="label">The Guardian</span></div>
+        <h3>Black Death historian: "A coronavirus depression could be the great leveller"</h3>
+        <p>An interview with Stanford historian Walter Scheidel on why pandemics, wars and revolutions are what historically break entrenched systems and reduce inequality, and what Covid-19 might change.</p>
+        <a class="link" href="https://www.theguardian.com/world/commentisfree/2020/apr/30/walter-scheidel-a-shock-to-the-established-order-can-deliver-change" target="_blank" rel="noopener">Read in The Guardian</a>
+      </article>
+
+      <article class="card">
+        <div class="img"><img src="img/wttj-tribe.jpg" alt="Illustration of a man flying three kites"></div>
+        <div class="meta"><span class="label">Article</span><span class="label">Welcome to the Jungle · Future of work</span></div>
+        <h3>Why companies need strong but lean HR departments to create the 'tribe vibe'</h3>
+        <p>As millennials look for close-knit communities at work, traditional companies have to rethink recruiting and HR. The case for HR teams that stay strong and expert-led while cutting the bureaucracy.</p>
+        <a class="link" href="https://www.welcometothejungle.com/en/articles/why-companies-need-strong-but-lean-hr-departments-to-create-the-tribe-vibe" target="_blank" rel="noopener">Read on Welcome to the Jungle</a>
+      </article>
+    </div>
+
+    <ul class="more">
+      <li><span class="label">The Independent</span><a href="https://www.independent.co.uk/voices/trump-europe-us-politics-america-relations-a9685006.html" target="_blank" rel="noopener">Despite Trump, there's more that binds Europe to the US than politics</a></li>
+      <li><span class="label">The Independent</span><a href="https://www.independent.co.uk/voices/labour-general-election-manifesto-immigration-ubi-green-party-corbyn-a9239461.html" target="_blank" rel="noopener">Universal basic income and open immigration? That's a pipe dream</a></li>
+      <li><span class="label">Welcome to the Jungle</span><a href="https://www.welcometothejungle.com/en/articles/the-american-dream-in-europe" target="_blank" rel="noopener">The American Dream in Europe?</a></li>
+      <li><span class="label">Welcome to the Jungle</span><a href="https://www.welcometothejungle.com/en/articles/recruitment-marketing-the-future-of-talent-acquisition" target="_blank" rel="noopener">Recruitment marketing: the future of talent acquisition?</a></li>
+      <li><span class="label">Welcome to the Jungle</span><a href="https://www.welcometothejungle.com/en/articles/what-is-digital-talent" target="_blank" rel="noopener">Beyond the buzz: who needs to nurture digital talent?</a></li>
+      <li><span class="label">Welcome to the Jungle</span><a href="https://www.welcometothejungle.com/en/articles/blockchain-and-employment-how-hiring-and-paying-salaries-could-be-set-to-change" target="_blank" rel="noopener">Blockchain and employment: how hiring and paying salaries could be set to change</a></li>
+      <li><span class="label">Welcome to the Jungle</span><a href="https://www.welcometothejungle.com/en/articles/how-blockchain-could-transform-the-core-of-hr" target="_blank" rel="noopener">How blockchain could transform the core of HR</a></li>
+      <li><span class="label">Welcome to the Jungle</span><a href="https://www.welcometothejungle.com/en/articles/how-can-hr-adapt-to-the-gdpr-2" target="_blank" rel="noopener">How can HR adapt to the GDPR?</a></li>
+      <li><span class="label">Are We Europe</span><a href="https://archive.areweeurope.com/stories/the-whistleblower-whisperer/" target="_blank" rel="noopener">The Whistleblower Whisperer: an interview with Angela Richter</a></li>
+    </ul>
+  </div>
+</section>
+
+<section id="about" aria-labelledby="about-title">
+  <div class="wrap">
+    <div class="about-grid">
+      <img src="img/stage.jpg" alt="Kyrill Hartog speaking on stage">
+      <div class="text">
+        <div class="label">About</div>
+        <h2 id="about-title" style="font-size:clamp(34px,5vw,56px);margin:12px 0 24px">Journalist turned content strategist</h2>
+        <p>I started out as a journalist and co-founded Are We Europe, an award-winning magazine I led as editor-in-chief. I then co-founded Awe Studio, a strategic communications studio for NGOs, foundations and international organisations, with campaigns for clients such as Greenpeace and Amnesty. Since then I've worked with more than 25 companies, from early-stage startups to multinationals, setting the editorial voice and standard for their most important content.</p>
+        <p>My work sits at the intersection of content, brand strategy and executive storytelling. Whether it's launching a category, educating a market or helping founders explain complex ideas, I write content that earns attention, trust and long-term authority.</p>
+        <p>Today I also lead brand and content at DUPR, the sports-tech company behind pickleball's global rating system, where we've reached #1 Google rankings for the sport's most valuable search terms and built a 1.3M-subscriber newsletter. I serve on Malt's freelancer advisory board.</p>
+        <p class="label langs">English · Dutch · French · Spanish · German · Russian</p>
+      </div>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>10+</b><span>Years in content</span></div>
+      <div class="stat"><b>25+</b><span>Companies</span></div>
+      <div class="stat"><b>300+</b><span>Stories &amp; projects</span></div>
+      <div class="stat"><b>10+</b><span>Reports &amp; white papers</span></div>
+      <div class="stat"><b>6</b><span>Languages</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact" aria-labelledby="contact-title">
+  <div class="wrap">
+    <div class="label">Contact</div>
+    <h2 id="contact-title" style="margin-top:14px">Let's talk</h2>
+    <p>Have a report, launch or story that needs telling? Tell me what you're working on.</p>
+    <a class="mail" href="mailto:hello.kyrillhartog@gmail.com">hello.kyrillhartog@gmail.com</a>
+    <div class="row">
+      <a class="link" href="https://www.linkedin.com/in/kyrill-hartog/" target="_blank" rel="noopener">LinkedIn</a>
+      <span class="label">Luxembourg · Remote across Europe</span>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Kyrill Hartog</span>
+    <a href="#top" style="text-decoration:none">Back to top ↑</a>
+  </div>
+</footer>
+
+</body>
+</html>
