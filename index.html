@@ -52,18 +52,19 @@
   .btn:hover{background:var(--bg);color:var(--fg)}
   .btn.ghost{background:transparent;color:var(--fg)}
   .btn.ghost:hover{background:var(--fg);color:var(--bg)}
-  .portrait{width:100%;height:auto;filter:grayscale(1) contrast(1.05)}
+  .portrait{width:100%;height:auto}
   @media (max-width:860px){.hero-grid{grid-template-columns:1fr}.portrait{max-width:420px}}
 
   /* logos */
   .clients{padding:clamp(48px,7vw,88px) 0}
   .clients .intro{text-align:center;margin-bottom:clamp(32px,5vw,56px)}
   .clients .intro h2{font-size:clamp(28px,4vw,44px);margin-top:12px}
-  .logos{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));border-left:1px solid var(--line);border-top:1px solid var(--line)}
-  .logos div{display:flex;align-items:center;justify-content:center;aspect-ratio:2/1;border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:clamp(14px,2.4vw,30px)}
-  .logos img{max-height:46px;max-width:78%;width:auto;object-fit:contain;opacity:.88;transition:opacity .2s}
-  .logos div:hover img{opacity:1}
+  .logos{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}
+  .logos div{display:flex;align-items:center;justify-content:center;aspect-ratio:2/1;background:#fff;padding:clamp(14px,2.4vw,28px)}
+  .logos img{max-height:46px;max-width:80%;width:auto;object-fit:contain;transition:transform .2s}
+  .logos div:hover img{transform:scale(1.05)}
   .logos img.tall{max-height:58px}
+  .logos img.tile{max-height:64px;max-width:86%}
   @media (max-width:860px){.logos{grid-template-columns:repeat(3,minmax(0,1fr))}}
   @media (max-width:520px){.logos{grid-template-columns:repeat(2,minmax(0,1fr))}.logos img{max-height:36px}}
 
@@ -71,7 +72,7 @@
   .work{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(28px,4vw,48px)}
   .card{display:flex;flex-direction:column;gap:16px}
   .card .img{background:var(--panel);border:1px solid var(--line);aspect-ratio:16/10;overflow:hidden;display:flex;align-items:center;justify-content:center}
-  .card .img img{width:100%;height:100%;object-fit:contain;filter:grayscale(1);transition:transform .5s}
+  .card .img img{width:100%;height:100%;object-fit:contain;transition:transform .5s}
   .card:hover .img img{transform:scale(1.03)}
   .card h3{font-size:clamp(22px,2.4vw,30px)}
   .card .meta{display:flex;gap:14px;flex-wrap:wrap}
@@ -90,7 +91,7 @@
   .dossier{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,330px),1fr));border-top:1px solid var(--line);border-left:1px solid var(--line)}
   .file{border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:28px;display:flex;flex-direction:column;gap:14px}
   .file .thumb{aspect-ratio:16/9;overflow:hidden;border:1px solid var(--line);position:relative;background:var(--panel)}
-  .file .thumb img{width:100%;height:100%;object-fit:contain;filter:grayscale(1)}
+  .file .thumb img{width:100%;height:100%;object-fit:contain}
   .file .tag{align-self:flex-start;margin-top:-4px;background:var(--fg);color:var(--bg);font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;padding:4px 8px}
   .file h3{font-size:22px}
   .file dl{display:grid;grid-template-columns:88px 1fr;gap:6px 14px;font-size:16px}
@@ -128,7 +129,7 @@
 
   /* about */
   .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,72px);align-items:start}
-  .about-grid img{width:100%;height:auto;filter:grayscale(1)}
+  .about-grid img{width:100%;height:auto}
   .about-grid .text p+p{margin-top:16px}
   .about-grid .text p{color:#d6d6d6}
   .stats{display:grid;grid-template-columns:repeat(5,1fr);margin-top:clamp(40px,6vw,64px);border-top:1px solid var(--line)}
@@ -169,7 +170,7 @@
     <div>
       <div class="label">Editorial Director &amp; Content Strategist &nbsp;/&nbsp; (Fin)Tech, VC &amp; AI</div>
       <h1>Kyrill<br>Hartog</h1>
-      <p class="lede">I help startups, funds and global brands turn complex ideas into <b>content that earns attention</b>, trust and long-term authority.</p>
+      <p class="lede">I help companies in tech, finance and VC turn complex ideas into <b>content that earns attention</b>, trust and long-term authority.</p>
       <div class="ctas">
         <a class="btn" href="#work">See the work</a>
         <a class="btn ghost" href="mailto:hello.kyrillhartog@gmail.com">Get in touch</a>
@@ -187,31 +188,31 @@
       <h2 id="clients-title">25+ companies, from early-stage startups to multinationals</h2>
     </div>
     <div class="logos">
-      <div><img src="img/logos/mastercard.png" alt="Mastercard" class="tall"></div>
-      <div><img src="img/logos/paypal.png" alt="PayPal"></div>
-      <div><img src="img/logos/slack.png" alt="Slack"></div>
-      <div><img src="img/logos/lvmh.png" alt="LVMH"></div>
-      <div><img src="img/logos/nestle.png" alt="Nestlé"></div>
-      <div><img src="img/logos/malt.png" alt="Malt"></div>
-      <div><img src="img/logos/doctolib.png" alt="Doctolib"></div>
-      <div><img src="img/logos/hololens.png" alt="Microsoft HoloLens"></div>
-      <div><img src="img/logos/alstom.png" alt="Alstom"></div>
-      <div><img src="img/logos/boehringer.png" alt="Boehringer Ingelheim"></div>
-      <div><img src="img/logos/50intech.png" alt="50inTech"></div>
-      <div><img src="img/logos/dreem.png" alt="Dreem"></div>
-      <div><img src="img/logos/maddyness.png" alt="Maddyness"></div>
-      <div><img src="img/logos/zest.png" alt="Zest"></div>
-      <div><img src="img/logos/spie.png" alt="SPIE" class="tall"></div>
-      <div><img src="img/logos/virbac.png" alt="Virbac"></div>
-      <div><img src="img/logos/jenji.png" alt="Jenji" class="tall"></div>
-      <div><img src="img/logos/pelico.png" alt="Pelico"></div>
-      <div><img src="img/logos/gapstars.png" alt="Gapstars"></div>
-      <div><img src="img/logos/sqwad.png" alt="Sqwad"></div>
-      <div><img src="img/logos/unlikely.png" alt="Unlikely Technology"></div>
-      <div><img src="img/logos/unither.png" alt="Unither Pharmaceuticals" class="tall"></div>
-      <div><img src="img/logos/w.png" alt="Client logo" class="tall"></div>
-      <div><img src="img/logos/cm.png" alt="Client logo" class="tall"></div>
-      <div><img src="img/logos/diamond.png" alt="Client logo" class="tall"></div>
+      <div><img src="img/logos-color/mastercard.png" alt="Mastercard" class="tall"></div>
+      <div><img src="img/logos-color/paypal.png" alt="PayPal"></div>
+      <div><img src="img/logos-color/slack.png" alt="Slack" class="tile"></div>
+      <div><img src="img/logos-color/lvmh.png" alt="LVMH" class="tile"></div>
+      <div><img src="img/logos-color/nestle.png" alt="Nestlé"></div>
+      <div><img src="img/logos-color/malt.png" alt="Malt"></div>
+      <div><img src="img/logos-color/doctolib.png" alt="Doctolib"></div>
+      <div><img src="img/logos-color/hololens.png" alt="Microsoft HoloLens" class="tile"></div>
+      <div><img src="img/logos-color/alstom.png" alt="Alstom"></div>
+      <div><img src="img/logos-color/boehringer.png" alt="Boehringer Ingelheim"></div>
+      <div><img src="img/logos-color/50intech.png" alt="50inTech"></div>
+      <div><img src="img/logos-color/dreem.png" alt="Dreem"></div>
+      <div><img src="img/logos-color/maddyness.png" alt="Maddyness"></div>
+      <div><img src="img/logos-color/zest.png" alt="Zest"></div>
+      <div><img src="img/logos-color/spie.png" alt="SPIE" class="tall"></div>
+      <div><img src="img/logos-color/virbac.png" alt="Virbac"></div>
+      <div><img src="img/logos-color/jenji.png" alt="Jenji" class="tall"></div>
+      <div><img src="img/logos-color/pelico.png" alt="Pelico"></div>
+      <div><img src="img/logos-color/gapstars.png" alt="Gapstars"></div>
+      <div><img src="img/logos-color/sqwad.png" alt="Sqwad"></div>
+      <div><img src="img/logos-color/unlikely.png" alt="Unlikely Technology" class="tile"></div>
+      <div><img src="img/logos-color/unither.png" alt="Unither Pharmaceuticals" class="tall"></div>
+      <div><img src="img/logos-color/w.png" alt="Client logo" class="tall"></div>
+      <div><img src="img/logos-color/cm.png" alt="Client logo" class="tile"></div>
+      <div><img src="img/logos-color/diamond.png" alt="Client logo" class="tall"></div>
     </div>
   </div>
 </section>
